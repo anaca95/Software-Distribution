@@ -1112,3 +1112,22 @@ section {
     }
 
 }
+
+.demo-video-link {
+    display: block;
+    padding: 10px 20px 0;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: color 0.2s ease;
+}
+
+.demo-video-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
