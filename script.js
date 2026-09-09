@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const year = new Date().getFullYear();
 
         footerCopyright.textContent =
-            `© ${year} AC Software. Todos os direitos reservados.`;
+            `© ${year} Stray Cats Software. Todos os direitos reservados.`;
     }
 
 
