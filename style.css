@@ -1134,7 +1134,6 @@ section {
 
 /* =========================
    WHATSAPP BUTTON
-   Regras reforçadas para evitar sobrescrita no GitHub Pages
 ========================= */
 
 .software-actions .button.button-whatsapp {
@@ -1143,10 +1142,13 @@ section {
     justify-content: center !important;
     gap: 9px !important;
 
-    min-height: 46px !important;
+    flex: 1 1 auto;
     width: 100%;
+    min-height: 46px;
+
     padding: 11px 22px !important;
 
+    background: #25D366 !important;
     background-color: #25D366 !important;
     color: #ffffff !important;
 
@@ -1163,22 +1165,32 @@ section {
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
-        background-color 0.2s ease !important;
+        background-color 0.2s ease,
+        border-color 0.2s ease !important;
 }
 
 .software-actions .button.button-whatsapp:hover {
+    background: #1ebe5d !important;
     background-color: #1ebe5d !important;
     border-color: #1ebe5d !important;
     color: #ffffff !important;
 
     transform: translateY(-2px);
+
     box-shadow: 0 10px 22px rgba(37, 211, 102, 0.28) !important;
+}
+
+.software-actions .button.button-whatsapp:visited,
+.software-actions .button.button-whatsapp:active,
+.software-actions .button.button-whatsapp:focus {
+    color: #ffffff !important;
 }
 
 .software-actions .button.button-whatsapp i {
     color: #ffffff !important;
     font-size: 18px !important;
     line-height: 1 !important;
+    flex-shrink: 0;
 }
 
 .software-actions .button.button-whatsapp span {
