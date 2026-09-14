@@ -1131,3 +1131,23 @@ section {
     color: var(--primary-dark);
     text-decoration: underline;
 }
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.button-whatsapp {
+    background: #25D366;
+    color: #ffffff;
+    gap: 9px;
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.22);
+}
+
+.button-whatsapp:hover {
+    background: #1ebe5d;
+    box-shadow: 0 10px 22px rgba(37, 211, 102, 0.28);
+}
+
+.button-whatsapp i {
+    font-size: 18px;
+}
