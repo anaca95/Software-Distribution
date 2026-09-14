@@ -1134,20 +1134,59 @@ section {
 
 /* =========================
    WHATSAPP BUTTON
+   Regras reforçadas para evitar sobrescrita no GitHub Pages
 ========================= */
 
-.button-whatsapp {
-    background: #25D366;
-    color: #ffffff;
-    gap: 9px;
-    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.22);
+.software-actions .button.button-whatsapp {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+
+    min-height: 46px !important;
+    width: 100%;
+    padding: 11px 22px !important;
+
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #25D366 !important;
+    border-radius: 9px !important;
+
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.22) !important;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease !important;
 }
 
-.button-whatsapp:hover {
-    background: #1ebe5d;
-    box-shadow: 0 10px 22px rgba(37, 211, 102, 0.28);
+.software-actions .button.button-whatsapp:hover {
+    background-color: #1ebe5d !important;
+    border-color: #1ebe5d !important;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(37, 211, 102, 0.28) !important;
 }
 
-.button-whatsapp i {
-    font-size: 18px;
+.software-actions .button.button-whatsapp i {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+}
+
+.software-actions .button.button-whatsapp span {
+    color: #ffffff !important;
+}
+
+@media (max-width: 720px) {
+    .software-actions .button.button-whatsapp {
+        width: 100% !important;
+    }
 }
