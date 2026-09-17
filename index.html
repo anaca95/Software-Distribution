@@ -13,6 +13,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3WPEB9C1H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X3WPEB9C1H');
+    </script>
+
 </head>
 
 <body>
@@ -796,6 +807,63 @@
         </div>
 
     </footer>
+
+
+    <!-- Google Analytics - eventos de interação -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof gtag !== "function") return;
+
+        document.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                const href = (link.getAttribute("href") || "").trim();
+                const text = (link.innerText || link.textContent || "").trim();
+                let eventName = null;
+                let category = null;
+
+                if (link.classList.contains("demo-video-link")) {
+                    eventName = "demo_video_click";
+                    category = "video_demo";
+                } else if (
+                    text.toLowerCase().includes("download") ||
+                    href.includes("drive.google.com")
+                ) {
+                    eventName = "download_click";
+                    category = "download";
+                } else if (
+                    href.includes("wa.me") ||
+                    link.classList.contains("button-whatsapp")
+                ) {
+                    eventName = "whatsapp_click";
+                    category = "contato";
+                } else if (
+                    text.toLowerCase().includes("licença") ||
+                    text.toLowerCase().includes("licenca")
+                ) {
+                    eventName = "license_click";
+                    category = "licenca";
+                } else if (href.startsWith("mailto:")) {
+                    eventName = "email_click";
+                    category = "contato";
+                } else if (href.includes("github.com")) {
+                    eventName = "github_click";
+                    category = "social";
+                } else if (href.includes("linkedin.com")) {
+                    eventName = "linkedin_click";
+                    category = "social";
+                }
+
+                if (eventName) {
+                    gtag("event", eventName, {
+                        event_category: category,
+                        link_text: text,
+                        link_url: href
+                    });
+                }
+            });
+        });
+    });
+    </script>
 
 </body>
 </html>
