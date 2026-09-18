@@ -300,6 +300,13 @@ select {
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.22);
 }
 
+.button-sec {
+    background: #90D104;
+    color: #000000;
+
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.22);
+}
+
 .button-primary:hover {
     background: var(--primary-dark);
 
